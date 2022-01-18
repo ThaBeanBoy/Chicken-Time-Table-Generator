@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="./fontello-99d62dd4/css/fontello-embedded.css"
+    />
+    <link rel="stylesheet" href="./Swiper/swiper.min.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="container">
+      <h1>Chicken Time Table Generator</h1>
+
+      <form action="">
+        <div class="inp-wrapper">
+          <input type="text" id="batchName" required /><br />
+          <label>Batch Name:</label><br />
+        </div>
+        <div class="inp-wrapper">
+          <input type="text" id="numOfChicks" required />
+          <label>Number of Chicks:</label><br />
+        </div>
+        <div class="inp-wrapper">
+          <input type="date" id="dateArrival" />
+          <label>Arrival Date:</label>
+        </div>
+      </form>
+
+      <div class="bottomActions">
+        <span id="clearForm">Clear Inputs</span>
+        <span id="generate">Generate</span>
+      </div>
+    </section>
+
+    <section class="calendar">
+      <div class="calendarActions">
+        <div class="months">
+          <span class="active">Jan</span>
+          <span>Feb</span>
+          <span>March</span>
+        </div>
+
+        <span class="BatchName">BatchName</span>
+
+        <div class="finalActions">
+          <span id="printCalendars">Print <i class="icon-print"></i></span>
+          <i id="closeCalendar" class="icon-cancel"></i>
+        </div>
+      </div>
+
+      <div class="allTables">
+        <div class="swiper-wrapper">
+          <table class="swiper-slide">
+            <tr>
+              <th>Sunday</th>
+              <th>Monday</th>
+              <th>Tuesday</th>
+              <th>Wednesday</th>
+              <th>Thursday</th>
+              <th>Friday</th>
+              <th>Saturday</th>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="inactive">1</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>3</td>
+              <td>4</td>
+              <td>5</td>
+              <td>6</td>
+              <td>7</td>
+              <td>8</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>10</td>
+              <td>11</td>
+              <td>12</td>
+              <td>13</td>
+              <td>14</td>
+              <td>15</td>
+            </tr>
+            <tr>
+              <td>16</td>
+              <td>17</td>
+              <td>18</td>
+              <td>19</td>
+              <td>20</td>
+              <td>21</td>
+              <td>22</td>
+            </tr>
+            <tr>
+              <td>23</td>
+              <td>24</td>
+              <td>25</td>
+              <td>26</td>
+              <td>27</td>
+              <td>28</td>
+              <td>29</td>
+            </tr>
+            <tr>
+              <td>30</td>
+              <td>31</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+          <table class="swiper-slide">
+            <tr>
+              <th>Sunday</th>
+              <th>Monday</th>
+              <th>Tuesday</th>
+              <th>Wednesday</th>
+              <th>Thursday</th>
+              <th>Friday</th>
+              <th>Saturday</th>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>3</td>
+              <td>4</td>
+              <td>5</td>
+              <td>6</td>
+              <td>7</td>
+              <td>8</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>10</td>
+              <td>11</td>
+              <td>12</td>
+              <td>13</td>
+              <td>14</td>
+              <td>15</td>
+            </tr>
+            <tr>
+              <td>16</td>
+              <td>17</td>
+              <td>18</td>
+              <td>19</td>
+              <td>20</td>
+              <td>21</td>
+              <td>22</td>
+            </tr>
+            <tr>
+              <td>23</td>
+              <td>24</td>
+              <td>25</td>
+              <td>26</td>
+              <td>27</td>
+              <td>28</td>
+              <td>29</td>
+            </tr>
+            <tr>
+              <td>30</td>
+              <td>31</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <img src="./Chick.png" alt="" />
+  </body>
+
+  <script src="./Swiper/swiper.min.js"></script>
+  <script src="./script.js"></script>
+</html>

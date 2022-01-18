@@ -1,0 +1,18 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2022 by original authors @ fontello.com</metadata>
+<defs>
+<font id="fontello" horiz-adv-x="1000" >
+<font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="water" unicode="&#xe800;" d="M168 844q10-86 50-155t73-123 33-112q0-66-48-113t-114-47-114 47-48 113q0 58 33 112t73 123 50 155q2 4 7 4t5-4z m616 0q10-86 50-155t73-123 33-112q0-66-48-113t-114-47-114 47-48 113q0 48 21 93t48 78 53 92 34 127q2 4 7 4t5-4z m-320-444q2 4 7 4t5-4q10-86 50-155t73-123 33-112q0-66-48-113t-114-47-114 47-48 113q0 58 33 112t73 123 50 155z" horiz-adv-x="940" />
+
+<glyph glyph-name="print" unicode="&#xe801;" d="M66 526q-26 0-22 22 4 10 12 14 2 0 49 17t93 32 58 15l44 0 0 150 380 0 0-150 46 0q12 0 57-15t92-32 49-17q18-8 12-26-4-10-20-10l-850 0z m860-56q20 0 37-19t17-41l0-174q0-22-17-41t-37-19l-100 0 44-250-760 0 44 250-98 0q-20 0-38 19t-18 41l0 174q0 22 18 41t38 19l870 0z m-716-444l560 0-70 324-420 0z" horiz-adv-x="980" />
+
+<glyph glyph-name="cancel" unicode="&#xe803;" d="M724 112q0-22-15-38l-76-76q-16-15-38-15t-38 15l-164 165-164-165q-16-15-38-15t-38 15l-76 76q-16 16-16 38t16 38l164 164-164 164q-16 16-16 38t16 38l76 76q16 16 38 16t38-16l164-164 164 164q16 16 38 16t38-16l76-76q15-15 15-38t-15-38l-164-164 164-164q15-15 15-38z" horiz-adv-x="785.7" />
+
+<glyph glyph-name="food" unicode="&#xf0f5;" d="M357 814v-357q0-34-20-62t-51-39v-435q0-29-21-50t-51-21h-71q-29 0-50 21t-22 50v435q-31 11-51 39t-20 62v357q0 15 11 25t25 11 25-11 10-25v-232q0-14 11-25t25-11 25 11 11 25v232q0 15 11 25t25 11 25-11 10-25v-232q0-14 11-25t25-11 25 11 11 25v232q0 15 10 25t25 11 26-11 10-25z m429 0v-893q0-29-21-50t-51-21h-71q-29 0-50 21t-22 50v286h-125q-7 0-12 5t-5 13v446q0 74 52 127t126 52h143q15 0 25-11t11-25z" horiz-adv-x="785.7" />
+</font>
+</defs>
+</svg>

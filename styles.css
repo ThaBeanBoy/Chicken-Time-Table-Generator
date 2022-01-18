@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 100vh;
+  justify-content: center;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+body .container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 1.5rem;
+  width: 100%;
+  margin: 2rem 0;
+}
+
+body .container form .inp-wrapper {
+  height: 40px;
+  margin-bottom: 30px;
+  position: relative;
+  width: 100%;
+}
+
+body .container form .inp-wrapper label {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  pointer-events: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+body .container form .inp-wrapper input {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-bottom: solid 2px grey;
+  outline: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+body .container form .inp-wrapper input:focus {
+  border-color: #ffe2ab;
+}
+
+body .container form .inp-wrapper input:focus ~ label,
+body .container form .inp-wrapper input:valid ~ label {
+  transform: translateY(-23px);
+  font-size: 0.75rem;
+}
+
+body .container .bottomActions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 1.5rem;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+body .container .bottomActions span {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.5s;
+  transition: 0.3s;
+}
+
+body .container .bottomActions span:hover {
+  font-size: 1.25em;
+}
+
+body .container .bottomActions #clearForm {
+  border: #ffe2ab solid 0.2rem;
+}
+
+body .container .bottomActions #generate {
+  background-color: #ffe2ab;
+  border: #ffe2ab solid 0.2rem;
+}
+
+body .calendar {
+  transition: 0.5s;
+  position: absolute;
+  left: 50%;
+  top: -50%;
+  transform: translate(-50%, -50%);
+  width: 95vw;
+  height: 95vh;
+  padding: 0.5rem;
+  border: 0.15rem solid #211e16;
+  border-radius: 1rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+body .calendar .calendarActions {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body .calendar .calendarActions * {
+  cursor: pointer;
+}
+
+body .calendar .calendarActions span {
+  padding: 0.5rem;
+  border: 0.1rem black solid;
+}
+
+body .calendar .calendarActions .BatchName {
+  border: none;
+  font-weight: bolder;
+  text-decoration: underline;
+  font-size: 1.5rem;
+}
+
+body .calendar .calendarActions .months span {
+  margin: 0 0.25rem;
+  transition: 0.3s;
+}
+
+body .calendar .calendarActions .months span:hover {
+  font-size: 1.25em;
+}
+
+body .calendar .calendarActions .months span:hover:not(.active) {
+  background-color: #fdf6e8;
+}
+
+body .calendar .calendarActions .months span:first-child {
+  border-radius: 0.5rem 0 0 0;
+}
+
+body .calendar .calendarActions .months span:last-child {
+  border-radius: 0 0.5rem 0 0;
+}
+
+body .calendar .calendarActions .months .active {
+  background-color: #ffe2ab;
+}
+
+body .calendar .calendarActions .finalActions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+}
+
+body .calendar .calendarActions .finalActions #printCalendars {
+  border-radius: 0.5rem;
+  background-color: #22fa22;
+  transition: 0.3s;
+}
+
+body .calendar .calendarActions .finalActions #printCalendars:hover {
+  font-size: 1.25em;
+}
+
+body .calendar .calendarActions .finalActions #printCalendars:hover {
+  background-color: #77fa77;
+}
+
+body .calendar .calendarActions .finalActions #closeCalendar {
+  transition: 0.3s;
+  font-size: 1.5rem;
+}
+
+body .calendar .calendarActions .finalActions #closeCalendar:hover {
+  color: #f75d5d;
+}
+
+body .calendar .allTables {
+  width: 100%;
+  flex-grow: 1;
+  padding-top: 0.5rem;
+  overflow: hidden;
+}
+
+body .calendar .allTables .swiper-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+body .calendar .allTables table {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+body .calendar .allTables table th,
+body .calendar .allTables table td {
+  width: 14.28%;
+}
+
+body .calendar .allTables table th:empty,
+body .calendar .allTables table td:empty {
+  background-color: #333333;
+}
+
+body .calendar .allTables table .inactive {
+  background-color: #8b8b8b;
+}
+
+body .calendar .allTables table,
+body .calendar .allTables th,
+body .calendar .allTables td {
+  border: 0.1rem solid black;
+  border-collapse: collapse;
+}
+
+@media only screen and (max-width: 915px) {
+  body img {
+    display: none;
+  }
+}

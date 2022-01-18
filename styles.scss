@@ -1,0 +1,254 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+@mixin flexTings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+@mixin fontHoverAnimation {
+  transition: 0.3s;
+  &:hover {
+    font-size: 1.25em;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+  $font-size: 1.5rem;
+  $ConstBorderWidth: 0.2rem;
+
+  @include flexTings;
+  flex-direction: row;
+
+  font-family: 'Montserrat', sans-serif;
+
+  .container {
+    @include flexTings;
+    height: 100vh;
+    justify-content: center;
+    text-align: center;
+    padding: 0.5rem;
+
+    form {
+      @include flexTings;
+      font-size: $font-size;
+      width: 100%;
+      margin: 2rem 0;
+      //   border: solid $ConstBorderWidth #211e16;
+      //   border-radius: 0.5rem;
+      //   padding: 1rem;
+
+      .inp-wrapper {
+        $inputHeight: 40px;
+
+        height: $inputHeight;
+        margin-bottom: 30px;
+        position: relative;
+        width: 100%;
+        // box-shadow: 5px 5px grey;
+
+        label {
+          position: absolute;
+          bottom: 10px;
+          left: 0;
+          pointer-events: none;
+          font-size: 16px;
+          transition: 0.3s;
+        }
+
+        input {
+          width: 100%;
+          height: $inputHeight;
+          border: none;
+          border-bottom: solid 2px grey;
+          outline: none;
+          font-size: 16px;
+          transition: 0.3s;
+
+          &:focus {
+            border-color: #ffe2ab;
+          }
+
+          &:focus ~ label,
+          &:valid ~ label {
+            transform: translateY(-23px);
+            font-size: 0.75rem;
+          }
+        }
+      }
+    }
+
+    .bottomActions {
+      @include flexTings;
+      font-size: $font-size;
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+
+      span {
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        cursor: pointer;
+
+        transition: 0.5s;
+        @include fontHoverAnimation;
+      }
+
+      #clearForm {
+        border: #ffe2ab solid $ConstBorderWidth;
+      }
+
+      #generate {
+        background-color: #ffe2ab;
+        border: #ffe2ab solid $ConstBorderWidth;
+      }
+    }
+  }
+
+  .calendar {
+    $constantPadding: 0.5rem;
+    $constantRadiusInCalendar: 1rem;
+
+    transition: 0.5s;
+
+    position: absolute;
+    left: 50%;
+    // ! line below is for release
+    top: -50%;
+    // ! line below is for dev
+    // top: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 95vw;
+    height: 95vh;
+    padding: $constantPadding;
+    border: 0.15rem solid #211e16;
+    border-radius: $constantRadiusInCalendar;
+    background-color: white;
+
+    @include flexTings;
+
+    .calendarActions {
+      width: 100%;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      $constantBorderRadius: 0.5rem;
+
+      * {
+        cursor: pointer;
+      }
+
+      span {
+        padding: 0.5rem;
+        border: 0.1rem black solid;
+      }
+
+      .BatchName {
+        border: none;
+        font-weight: bolder;
+        text-decoration: underline;
+        font-size: 1.5rem;
+      }
+
+      .months {
+        span {
+          margin: 0 0.25rem;
+          @include fontHoverAnimation;
+          &:hover:not(.active) {
+            background-color: #fdf6e8;
+          }
+        }
+
+        span:first-child {
+          border-radius: $constantBorderRadius 0 0 0;
+        }
+
+        span:last-child {
+          border-radius: 0 $constantBorderRadius 0 0;
+        }
+
+        .active {
+          background-color: #ffe2ab;
+        }
+      }
+
+      .finalActions {
+        @include flexTings;
+        flex-direction: row;
+        align-items: center;
+
+        #printCalendars {
+          border-radius: $constantBorderRadius;
+          background-color: rgb(34, 250, 34);
+
+          @include fontHoverAnimation;
+          &:hover {
+            background-color: rgb(119, 250, 119);
+          }
+        }
+
+        #closeCalendar {
+          transition: 0.3s;
+          font-size: 1.5rem;
+
+          &:hover {
+            color: rgb(247, 93, 93);
+          }
+        }
+      }
+    }
+
+    .allTables {
+      width: 100%;
+      flex-grow: 1;
+      padding-top: $constantPadding;
+      overflow: hidden;
+
+      .swiper-wrapper {
+        width: 100%;
+        height: 100%;
+      }
+
+      table {
+        width: 100%;
+        border-radius: $constantRadiusInCalendar;
+
+        th,
+        td {
+          width: 14.28%;
+
+          &:empty {
+            background-color: rgb(51, 51, 51);
+          }
+        }
+
+        .inactive {
+          background-color: rgb(139, 139, 139);
+        }
+      }
+
+      table,
+      th,
+      td {
+        border: 0.1rem solid black;
+        border-collapse: collapse;
+      }
+    }
+  }
+
+  img {
+    @media only screen and (max-width: 915px) {
+      display: none;
+    }
+  }
+}

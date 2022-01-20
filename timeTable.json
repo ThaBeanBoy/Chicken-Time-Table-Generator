@@ -1,0 +1,254 @@
+[
+  {
+    "Day": "1 (0 weeks)",
+    "Water": ["Bedgen 40", "Oregro HS", "Fosbac T"],
+    "Feeds": "Starter",
+    "Temperature": "30&#8451;"
+  },
+  {
+    "Day": 2,
+    "Water": ["Bedgen 40", "Oregro HS", "Fosbac T"],
+    "Feeds": "Starter",
+    "Temperature": "30&#8451;"
+  },
+  {
+    "Day": 3,
+    "Water": ["Bedgen 40", "Oregro HS", "Fosbac T"],
+    "Feeds": "Starter",
+    "Temperature": "30&#8451;"
+  },
+  {
+    "Day": 4,
+    "Water": ["Bedgen 40", "Fosbac T"],
+    "Feeds": "Starter",
+    "Temperature": "30&#8451;"
+  },
+  {
+    "Day": 5,
+    "Water": ["Bedgen 40", "Fosbac T"],
+    "Feeds": "Starter",
+    "Temperature": "30&#8451;"
+  },
+  {
+    "Day": 6,
+    "Water": ["Stress Care"],
+    "Feeds": "Starter",
+    "Temperature": "30&#8451;"
+  },
+  {
+    "Day": "7 (1 weeks)",
+    "Water": ["Stress Care"],
+    "Feeds": "Starter",
+    "Temperature": "30&#8451;"
+  },
+  {
+    "Day": 8,
+    "Water": ["Stress Care"],
+    "Feeds": "Starter",
+    "Temperature": "30&#8451;"
+  },
+  {
+    "Day": 9,
+    "Water": ["Oregro L"],
+    "Feeds": "Starter",
+    "Temperature": "30&#8451;"
+  },
+  {
+    "Day": 10,
+    "Water": ["Oregro L"],
+    "Feeds": "Starter",
+    "Temperature": "30&#8451;"
+  },
+  {
+    "Day": 11,
+    "Water": ["Oregro L"],
+    "Feeds": "Starter",
+    "Temperature": "30&#8451;"
+  },
+  {
+    "Day": 12,
+    "Water": ["Oregro L"],
+    "Feeds": "Starter",
+    "Temperature": "30&#8451;"
+  },
+  {
+    "Day": 13,
+    "Water": ["Oregro L"],
+    "Feeds": "Starter",
+    "Temperature": "30&#8451;"
+  },
+  {
+    "Day": "14 (2 weeks)",
+    "Water": ["Stress Care"],
+    "Feeds": "Starter",
+    "Temperature": "30&#8451;"
+  },
+  {
+    "Day": 15,
+    "Water": ["Stress Care"],
+    "Feeds": "Starter",
+    "Temperature": "30&#8451;"
+  },
+  {
+    "Day": 16,
+    "Water": ["Stress Care"],
+    "Feeds": "Starter",
+    "Temperature": "30&#8451;"
+  },
+  {
+    "Day": 17,
+    "Water": ["Backerfort"],
+    "Feeds": "Starter",
+    "Temperature": "30&#8451;"
+  },
+  {
+    "Day": 18,
+    "Water": ["Backerfort"],
+    "Feeds": "Grower",
+    "Temperature": "30&#8451;"
+  },
+  {
+    "Day": 19,
+    "Water": ["Backerfort"],
+    "Feeds": "Grower",
+    "Temperature": "30&#8451;"
+  },
+  {
+    "Day": 20,
+    "Water": ["Pure Water"],
+    "Feeds": "Grower",
+    "Temperature": "30&#8451;"
+  },
+  {
+    "Day": "21 (3 weeks)",
+    "Water": ["Bedgen 40"],
+    "Feeds": "Grower",
+    "Temperature": "30&#8451;"
+  },
+  {
+    "Day": 22,
+    "Water": ["Bedgen 40"],
+    "Feeds": "Grower",
+    "Temperature": "30&#8451;"
+  },
+  {
+    "Day": 23,
+    "Water": ["Bedgen 40"],
+    "Feeds": "Grower",
+    "Temperature": "30&#8451;"
+  },
+  {
+    "Day": 24,
+    "Water": ["Oregro L"],
+    "Feeds": "Grower",
+    "Temperature": "30&#8451;"
+  },
+  {
+    "Day": 25,
+    "Water": ["Oregro L"],
+    "Feeds": "Grower",
+    "Temperature": "30&#8451;"
+  },
+  {
+    "Day": 26,
+    "Water": ["Oregro L"],
+    "Feeds": "Grower",
+    "Temperature": "30&#8451;"
+  },
+  {
+    "Day": 27,
+    "Water": ["Bakerfort", "Oregro L"],
+    "Feeds": "Grower",
+    "Temperature": "30&#8451;"
+  },
+  {
+    "Day": "28 (4 weeks)",
+    "Water": ["Bakerfort", "Oregro L"],
+    "Feeds": "Grower",
+    "Temperature": "30&#8451;"
+  },
+  {
+    "Day": 29,
+    "Water": ["Bakerfort", "Oregro L"],
+    "Feeds": "Grower",
+    "Temperature": "30&#8451;"
+  },
+  {
+    "Day": 30,
+    "Water": ["Pure Water"],
+    "Feeds": "Grower",
+    "Temperature": "30&#8451;"
+  },
+  {
+    "Day": 31,
+    "Water": ["Pure Water"],
+    "Feeds": "Grower",
+    "Temperature": "30&#8451;"
+  },
+  {
+    "Day": 32,
+    "Water": ["Pure Water"],
+    "Feeds": "Grower",
+    "Temperature": "30&#8451;"
+  },
+  {
+    "Day": 33,
+    "Water": ["Pure Water"],
+    "Feeds": "Grower",
+    "Temperature": "30&#8451;"
+  },
+  {
+    "Day": "35 (5 weeks)",
+    "Water": ["Pure Water"],
+    "Feeds": "Grower",
+    "Temperature": "30&#8451;"
+  },
+  {
+    "Day": 35,
+    "Water": ["Pure Water"],
+    "Feeds": "Grower",
+    "Temperature": "30&#8451;"
+  },
+  {
+    "Day": 36,
+    "Water": ["Pure Water"],
+    "Feeds": "Grower",
+    "Temperature": "30&#8451;"
+  },
+  {
+    "Day": 37,
+    "Water": ["Pure Water"],
+    "Feeds": "Grower",
+    "Temperature": "30&#8451;"
+  },
+  {
+    "Day": 38,
+    "Water": ["Pure Water"],
+    "Feeds": "Grower",
+    "Temperature": "30&#8451;"
+  },
+  {
+    "Day": 39,
+    "Water": ["Pure Water"],
+    "Feeds": "Grower",
+    "Temperature": "30&#8451;"
+  },
+  {
+    "Day": 40,
+    "Water": ["Pure Water"],
+    "Feeds": "Grower",
+    "Temperature": "30&#8451;"
+  },
+  {
+    "Day": 41,
+    "Water": ["Pure Water"],
+    "Feeds": "Grower",
+    "Temperature": "30&#8451;"
+  },
+  {
+    "Day": "42 (6 weeks)",
+    "Water": ["Pure Water"],
+    "Feeds": "Grower",
+    "Temperature": "30&#8451;"
+  }
+]

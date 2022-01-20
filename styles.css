@@ -206,7 +206,7 @@ body .calendar .allTables {
   width: 100%;
   flex-grow: 1;
   padding-top: 0.5rem;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 body .calendar .allTables .swiper-wrapper {
@@ -217,16 +217,28 @@ body .calendar .allTables .swiper-wrapper {
 body .calendar .allTables table {
   width: 100%;
   border-radius: 1rem;
+  background-color: white;
 }
 
 body .calendar .allTables table th,
 body .calendar .allTables table td {
+  padding: 0.25rem;
   width: 14.28%;
 }
 
 body .calendar .allTables table th:empty,
 body .calendar .allTables table td:empty {
   background-color: #333333;
+}
+
+body .calendar .allTables table td {
+  text-align: left;
+  vertical-align: top;
+}
+
+body .calendar .allTables table td span {
+  font-weight: bolder;
+  font-size: 1.25rem;
 }
 
 body .calendar .allTables table .inactive {

@@ -212,7 +212,7 @@ body {
       width: 100%;
       flex-grow: 1;
       padding-top: $constantPadding;
-      overflow: hidden;
+      overflow-x: hidden;
 
       .swiper-wrapper {
         width: 100%;
@@ -222,13 +222,26 @@ body {
       table {
         width: 100%;
         border-radius: $constantRadiusInCalendar;
+        background-color: white;
 
         th,
         td {
+          padding: 0.25rem;
           width: 14.28%;
 
           &:empty {
             background-color: rgb(51, 51, 51);
+          }
+        }
+
+        td {
+          text-align: left;
+          vertical-align: top;
+
+          span {
+            // text-decoration: underline;
+            font-weight: bolder;
+            font-size: 1.25rem;
           }
         }
 

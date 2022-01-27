@@ -6,6 +6,7 @@ const clearFormBtn = document.querySelector('#clearForm');
 const generateBtn = document.querySelector('#generate');
 
 // Input fields
+const inputs = document.querySelectorAll('input');
 const batchName = document.querySelector('#batchName');
 const numOfChicks = document.querySelector('#numOfChicks');
 const dateArrival = document.querySelector('#dateArrival');
@@ -16,9 +17,9 @@ const finalActions = document.querySelector('.finalActions');
 const printButton = document.querySelector('#printCalendars');
 const closeCalendarSection = document.querySelector('#closeCalendar');
 
-onload = () => {
-  dateArrival.valueAsDate = new Date();
-};
+// onload = () => {
+//   dateArrival.valueAsDate = new Date();
+// };
 
 // Setting up swiper
 let swiper;
@@ -301,10 +302,10 @@ const generateCalendar = (timeTable) => {
 let visible = true;
 let showingCalendars = false;
 document.addEventListener('keydown', (ev) => {
-  // console.log(ev.keyCode);
-  // pressed 'E' on keyboard
-  // Displays the final actions buttons
+  console.log(ev.keyCode);
   switch (ev.keyCode) {
+    // pressed 'E' on keyboard
+    // Displays the final actions buttons
     case 69:
       if (showingCalendars) {
         if (visible) {
@@ -322,7 +323,46 @@ document.addEventListener('keydown', (ev) => {
     case 80:
       showingCalendars ? print() : {};
       break;
+
+    // pressed 'G' on keyboard
+    // generate calendars
+    case 71:
+      break;
+
+    // pressed 'C' on keyboard
+    // clear input fields
+    case 67:
+      break;
+
+    // pressed 'Enter' on keyboard
+    // go to next input field or generate if on last input field
+    // case 13:
+    //   break;
   }
+});
+
+inputs.forEach((el, indx) => {
+  // console.log(el);
+  el.addEventListener('keyup', (ev) => {
+    if (ev.keyCode === 13 && indx < inputs.length) {
+      inputs[indx + 1].focus();
+    } else {
+      // generate calenders
+    }
+
+    // console.table({'num inp':el.id === 'numOfChicks', 'too below': });
+    // if (el.id === 'numOfChicks' && (ev.keyCode < 48 || ev.keyCode > 57)) {
+    //   // prettier-ignore
+    //   console.log(el.value.replace('/\D/g', ''));
+    // }
+  });
+
+  el.id === 'numOfChicks'
+    ? el.addEventListener(
+        'input',
+        () => (el.value = el.value.replace(/\D/g, ''))
+      )
+    : {};
 });
 
 const print = () => {

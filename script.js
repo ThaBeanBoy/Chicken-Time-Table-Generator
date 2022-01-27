@@ -358,10 +358,10 @@ inputs.forEach((el, indx) => {
   });
 
   el.id === 'numOfChicks'
-    ? el.addEventListener(
-        'input',
-        () => (el.value = el.value.replace(/\D/g, ''))
-      )
+    ? el.addEventListener('input', () => {
+        el.value = el.value.replace(/\D/g, '');
+        el.value = isNaN(parseInt(el.value)) ? 0 : parseInt(el.value);
+      })
     : {};
 });
 

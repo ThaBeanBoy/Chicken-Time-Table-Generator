@@ -236,8 +236,14 @@ body .calendar .allTables table td {
   vertical-align: top;
 }
 
-body .calendar .allTables table td span {
+body .calendar .allTables table td .date {
+  font-size: 1.5rem;
   font-weight: bolder;
+}
+
+body .calendar .allTables table td .detail {
+  text-decoration: underline;
+  font-weight: normal;
   font-size: 1.25rem;
 }
 
@@ -256,4 +262,42 @@ body .calendar .allTables td {
   body img {
     display: none;
   }
+}
+
+table {
+  width: 100%;
+  border-radius: 1rem;
+  background-color: white;
+}
+
+table th,
+table td {
+  padding: 0.25rem;
+  width: 14.28%;
+}
+
+table th:empty,
+table td:empty {
+  background-color: #333333;
+}
+
+table td {
+  text-align: left;
+  vertical-align: top;
+}
+
+table td span {
+  font-weight: bolder;
+  font-size: 1.25rem;
+}
+
+table .inactive {
+  background-color: #8b8b8b;
+}
+
+table,
+th,
+td {
+  border: 0.1rem solid black;
+  border-collapse: collapse;
 }

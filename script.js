@@ -5,15 +5,16 @@ const CalenderSection = document.querySelector('.calendar');
 const clearFormBtn = document.querySelector('#clearForm');
 const generateBtn = document.querySelector('#generate');
 
-// Action buttons (Printing tings)
-const monthsTab = document.querySelector('.months');
-const printButton = document.querySelector('#printCalendars');
-const closeCalendarSection = document.querySelector('#closeCalendar');
-
 // Input fields
 const batchName = document.querySelector('#batchName');
 const numOfChicks = document.querySelector('#numOfChicks');
 const dateArrival = document.querySelector('#dateArrival');
+
+// Action buttons (Printing tings)
+const monthsTab = document.querySelector('.months');
+const finalActions = document.querySelector('.finalActions');
+const printButton = document.querySelector('#printCalendars');
+const closeCalendarSection = document.querySelector('#closeCalendar');
 
 onload = () => {
   dateArrival.valueAsDate = new Date();
@@ -69,6 +70,8 @@ closeCalendarSection.onclick = () => {
   setTimeout(() => {
     document.querySelector('.tables').innerHTML = '';
   }, 500);
+
+  showingCalendars = false;
 };
 
 const numToMonth = [
@@ -104,6 +107,8 @@ const MonthPoints = (D, first) => {
 };
 
 const generateCalendar = (timeTable) => {
+  showingCalendars = true;
+
   const SixWeeksInMillis = 3628800000;
   const ZeroWeekMark = new Date(dateArrival.valueAsNumber);
   const SixWeekMark = new Date(dateArrival.valueAsNumber + SixWeeksInMillis);
@@ -187,14 +192,22 @@ const generateCalendar = (timeTable) => {
         const box = cell(true, '');
         dispTimeTableDetails ? {} : box.classList.add('inactive');
 
-        const details = `<span>${date}</span> <br/> ${
+        const details = `<span class='date'>${date}</span> <br/> ${
           dispTimeTableDetails
             ? // ? `details of day: ${timeTable[timeTableDay].Day}`
               `
-              Day: ${timeTable[timeTableDay].Day} <br/> <br/>
-              Water: ${timeTable[timeTableDay].Water.toString()} <br/> <br/>
-              Feed: ${timeTable[timeTableDay].Feeds} <br/> <br/>
-              Temperature: ${timeTable[timeTableDay].Temperature}
+              <span class='detail'>Day:</span> ${
+                timeTable[timeTableDay].Day
+              } <br/> <br/>
+              <span class='detail'>Water:</span> <br/> ${timeTable[
+                timeTableDay
+              ].Water.toString()} <br/> <br/>
+              <span class='detail'>Feed:</span>${
+                timeTable[timeTableDay].Feeds
+              } <br/> <br/>
+              <span class='detail'>Temperature:</span><br/>${
+                timeTable[timeTableDay].Temperature
+              }
               `
             : ''
         } `;
@@ -243,7 +256,9 @@ const generateCalendar = (timeTable) => {
   // Displaying batch name
   document.querySelector(
     '.BatchName'
-  ).innerHTML = `${batchName.value}, units: ${numOfChicks.value}`;
+  ).innerHTML = `(${ZeroWeekMark.getDate()} ,${
+    numToMonth[ZeroWeekMark.getMonth()]
+  }) ${batchName.value}, units: ${numOfChicks.value}`;
 
   // Initialising swiper
   swiper = new Swiper('.allTables', {
@@ -274,8 +289,52 @@ const generateCalendar = (timeTable) => {
     },
   });
 
+  // Setting up the print button
+  printButton.onclick = print;
+
   // Showing the calenders
   CalenderSection.style.top = '50%';
 
   console.log(timeTable);
+};
+
+let visible = true;
+let showingCalendars = false;
+document.addEventListener('keydown', (ev) => {
+  // console.log(ev.keyCode);
+  // pressed 'E' on keyboard
+  // Displays the final actions buttons
+  switch (ev.keyCode) {
+    case 69:
+      if (showingCalendars) {
+        if (visible) {
+          finalActions.style.display = 'none';
+          visible = false;
+        } else {
+          finalActions.style.display = '';
+          visible = true;
+        }
+      }
+      break;
+
+    // pressed 'P' on keyboard
+    // execute print of the displayed timetable
+    case 80:
+      showingCalendars ? print() : {};
+      break;
+  }
+});
+
+const print = () => {
+  // Lesson from Adam Khoury
+  // https://youtu.be/UJAwNkhbYWM
+  const restorePage = document.body.innerHTML;
+  const contentToPrint = document.querySelector('.calendar').outerHTML;
+
+  // console.log(
+  //   document.querySelector('.tables').childNodes[swiper.activeIndex].outerHTML
+  // );
+  document.body.innerHTML = contentToPrint;
+  window.print();
+  // document.body.innerHTML = restorePage;
 };

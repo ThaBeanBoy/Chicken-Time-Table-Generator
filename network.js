@@ -1,3 +1,5 @@
+// Help from net ninja
+// https://youtu.be/a941B7g3fv8?list=PL4cUxeGkcC9jx2TTZk3IGWKSbtugYdrlu
 const getReq = (url, success, err) => {
   const request = new XMLHttpRequest();
 

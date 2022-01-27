@@ -4,7 +4,7 @@
   box-sizing: border-box;
   user-select: none;
 }
-
+$constantRadiusInCalendar: 1rem;
 @mixin flexTings {
   display: flex;
   flex-direction: column;
@@ -114,7 +114,6 @@ body {
 
   .calendar {
     $constantPadding: 0.5rem;
-    $constantRadiusInCalendar: 1rem;
 
     transition: 0.5s;
 
@@ -238,9 +237,14 @@ body {
           text-align: left;
           vertical-align: top;
 
-          span {
-            // text-decoration: underline;
+          .date {
+            font-size: 1.5rem;
             font-weight: bolder;
+          }
+
+          .detail {
+            text-decoration: underline;
+            font-weight: normal;
             font-size: 1.25rem;
           }
         }
@@ -264,4 +268,42 @@ body {
       display: none;
     }
   }
+}
+
+table {
+  width: 100%;
+  border-radius: $constantRadiusInCalendar;
+  background-color: white;
+
+  th,
+  td {
+    padding: 0.25rem;
+    width: 14.28%;
+
+    &:empty {
+      background-color: rgb(51, 51, 51);
+    }
+  }
+
+  td {
+    text-align: left;
+    vertical-align: top;
+
+    span {
+      // text-decoration: underline;
+      font-weight: bolder;
+      font-size: 1.25rem;
+    }
+  }
+
+  .inactive {
+    background-color: rgb(139, 139, 139);
+  }
+}
+
+table,
+th,
+td {
+  border: 0.1rem solid black;
+  border-collapse: collapse;
 }
